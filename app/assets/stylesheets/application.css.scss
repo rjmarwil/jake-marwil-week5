@@ -1,0 +1,29 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ body {
+   padding-top: 50px;
+ }
+
+ .img-footer {
+   max-width: 2em;
+   max-height: 2em;
+   margin-right: .5em;
+ }
+
+ footer {
+   border-top: 1px solid #C4C4C4;
+   padding-top: 10px;
+   margin-top: 20px;
+ }
+
+ #notice {
+   color: green;
+ }
+
+ .control-label {
+   text-align: right;
+   margin-bottom: 0;
+   padding-top: 7px;
+ }
