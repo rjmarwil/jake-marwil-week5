@@ -1,0 +1,35 @@
+<%= form_for(@location) do |f| %>
+
+<form accept-charset="UTF-8" action="/locations" class="form-horizontal" id="new_location" method="post">
+
+  <div class="form-group row">
+    <%= f.label :name, :class => "control-label col-md-2" %>
+    <div class="form-controls col-md-4">
+      <%= f.text_field :name, :class => 'form-control', :id => "name" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label :address, :class => "control-label col-md-2" %>
+    <div class="form-controls col-md-4">
+      <%= f.text_field :address, :class => 'form-control', :id => "address" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label :zipcode, :class => "control-label col-md-2" %>
+    <div class="form-controls col-md-4">
+      <%= f.text_field :zipcode, :class => 'form-control', :id => 'zipcode' %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-offset-2 col-md-4">
+      <%= f.submit :class => "btn btn-primary" %>
+      <a class='btn btn-default' href="/locations">Cancel</a>
+    </div>
+  </div>
+
+</form>
+
+<% end %>
