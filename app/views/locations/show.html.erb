@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h1><%= @location.name %>
+  <div class='pull-right'>
+    <%= link_to 'Edit', edit_location_path(@location), class:'btn btn-info' %>
+  </div>
+  </h1>
+</div>
+
+<div>
+  <h3>
+    Address: <%= @location.address %>
+  </h3>
+</div>
+
+<div>
+  <h3>
+    Zip Code: <%= @location.zipcode %>
+  </h3>
+</div>
+
+<br/>
+
+<ol class="breadcrumb">
+  <li><a href="/locations">Locations</a></li>
+  <li class="active"><%= @location.name %></li>
+</ol>
