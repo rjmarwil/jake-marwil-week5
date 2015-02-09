@@ -1,6 +1,4 @@
-<%= form_for(@event) do |f| %>
-
-<form accept-charset="UTF-8" action="/events" class="form-horizontal" id="new_event" method="post">
+<%= form_for([@location, @event]) do |f| %>
 
   <div class="form-group row">
     <%= f.label :description, :class => "control-label col-md-2" %>
@@ -29,7 +27,5 @@
       <a class='btn btn-default' href="/locations">Cancel</a>
     </div>
   </div>
-
-</form>
 
 <% end %>
