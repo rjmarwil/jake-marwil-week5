@@ -26,19 +26,22 @@ class EventsController < ApplicationController
   end
 
   def edit
+    @location = Location.find(params[:location_id])
     @event = Event.find(params[:id])
   end
 
   def update
+    @location = Location.find(params[:location_id])
     @event = Event.find(params[:id])
     @event.update_attributes(event_params)
-    redirect_to events_path
+    redirect_to location_event_path(@location, @event)
   end
 
   def destroy
+    @location = Location.find(params[:location_id])
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_path
+    redirect_to location_path(@location)
   end
 
   private
