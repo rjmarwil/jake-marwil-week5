@@ -16,7 +16,7 @@ class LocationsController < ApplicationController
     def create
       @location = Location.new(location_params)
       if @location.save
-        redirect_to locations_path
+        redirect_to locations_path, notice: 'Event was successfully created.'
       else
         render :new
       end
@@ -29,13 +29,13 @@ class LocationsController < ApplicationController
     def update
       @location = Location.find(params[:id])
       @location.update_attributes(location_params)
-      redirect_to locations_path
+      redirect_to locations_path, notice: 'Event was successfully updated.'
     end
 
     def destroy
       @location = Location.find(params[:id])
       @location.destroy
-      redirect_to locations_path
+      redirect_to locations_path, notice: 'Event was successfully deleted.'
     end
 
     private
