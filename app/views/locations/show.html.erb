@@ -53,8 +53,8 @@
         <td><%= event.requires_id %></td>
         <td>
           <div class='text-right'>
-            <%= link_to 'Edit', edit_location_event_path(@location, event), class:'btn btn-info' %>
-            <%= link_to 'Delete', location_event_path(@location, event), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+            <%= link_to 'Edit Event', edit_location_event_path(@location, event), class:'btn btn-info' %>
+            <%= link_to 'Delete Event', location_event_path(@location, event), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
           </div>
         </td>
       </tr>
