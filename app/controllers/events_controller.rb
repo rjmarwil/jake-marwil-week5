@@ -22,6 +22,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @location = Location.find(params[:location_id])
   end
 
   def edit

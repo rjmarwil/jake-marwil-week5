@@ -1,13 +1,13 @@
 <div class="page-header">
   <h1><%= @event.description %>
   <div class='pull-right'>
-    <%= link_to 'Edit Event', edit_event_path(@event), class:'btn btn-info' %>
+    <%= link_to 'Edit Event', edit_location_event_path(@location, @event), class:'btn btn-info' %>
   </div>
   </h1>
 </div>
 
 <ol class="breadcrumb">
-  <li><a href="/locations"><%= @location.name %></a></li>
+  <li><%= link_to @location.name, location_path(@location) %></a></li>
   <li class="active"><%= @event.description %></li>
 </ol>
 
