@@ -1,7 +1,7 @@
 <div class="page-header">
   <h1><%= @location.name %>
   <div class='pull-right'>
-    <%= link_to 'Edit', edit_location_path(@location), class:'btn btn-info' %>
+    <%= link_to 'Edit Location', edit_location_path(@location), class:'btn btn-info' %>
   </div>
   </h1>
 </div>
@@ -9,6 +9,9 @@
 <div>
   <h3>
     Address: <%= @location.address %>
+    <div class='pull-right'>
+      <%= link_to 'New Event', new_location_event_path(@location), class:'btn btn-info' %>
+    </div>
   </h3>
 </div>
 
