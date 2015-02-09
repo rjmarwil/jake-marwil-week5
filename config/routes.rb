@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'locations#index'
-   resources :locations do
-     resources :events
-   end
+  resources :locations do
+    resources :events
+  end
 
    resources :events
 
