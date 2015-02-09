@@ -24,6 +24,9 @@
   <div class="form-group row">
     <div class="col-md-offset-2 col-md-4">
       <%= f.submit :class => "btn btn-primary" %>
+      <% unless @event.new_record? %>
+      <%= link_to 'Delete Event', location_event_path(@location, @event), method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+      <% end %>
       <a class='btn btn-default' href="/locations">Cancel</a>
     </div>
   </div>
