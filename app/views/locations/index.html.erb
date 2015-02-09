@@ -26,6 +26,7 @@
           <div class='text-right'>
             <%= link_to 'Edit', edit_location_path(location), class:'btn btn-info' %>
             <%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+            <%= link_to 'Create Event', new_location_event_path(location), class:'btn btn-info' %>
           </div>
         </td>
       </tr>
